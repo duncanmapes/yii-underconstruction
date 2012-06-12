@@ -1,63 +1,19 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
-{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fnil\fcharset0 Menlo-Italic;\f2\fnil\fcharset0 Menlo-Regular;
-\f3\fnil\fcharset0 Menlo-Bold;}
-{\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red255\green255\blue255;\red26\green26\blue26;
-\red109\green109\blue109;\red251\green251\blue251;\red240\green0\blue0;\red110\green112\blue0;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\sa360
-
-\f0\b\fs36 \cf2 \cb3 Requirements \
-\pard\pardeftab720\sl420\sa400
-
-\b0\fs28 \cf4 ...requirements of using this extension (e.g. Yii 1.1 or above)...\
-\pard\pardeftab720\sa360
-
-\b\fs36 \cf2 Usage \
-\pard\pardeftab720\sl420\sa400
-
-\b0\fs28 \cf4 ...how to use this extension...\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sl420
-\ls1\ilvl0\cf4 {\listtext	1.	}Upload file UnderConstruction.php to components directory\
-{\listtext	2.	}Load Component in main.php\
-\pard\pardeftab720\sl420
-
-\f1\i\fs26 \cf5 \cb6 // preloading 'log' component
-\f2\i0 \
-\pard\pardeftab720\sl420
-\cf7 'preload'\cf5 =>
-\f3\b \cf0 array
-\f2\b0 \cf8 (\cf7 'log'\cf5 ,\cf7 'UnderConstruction'\cf8 )\cf5 ,\
-...\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sl420
-\ls2\ilvl0
-\f0\fs28 \cf4 \cb3 {\listtext	1.	}Configure Component\
-\pard\pardeftab720\sl420
-
-\f2\fs26 \cf7 \cb6 'components'\cf5 =>
-\f3\b \cf0 array
-\f2\b0 \cf8 (\cf5 \
-...\
-\cf7 'UnderConstruction'\cf5  => 
-\f3\b \cf0 array
-\f2\b0 \cf8 (\cf5 \
-            \cf7 'class'\cf5  => \cf7 'application.components.UnderConstruction'\cf5 ,\
-            \cf7 'allowedIPs'\cf5 =>
-\f3\b \cf0 array
-\f2\b0 \cf8 (\cf7 '192.168.1.1'\cf5 ,\cf7 '192.168.1.2'\cf8 )\cf5 , 
-\f1\i //whatever IPs you want to allow
-\f2\i0 \
-        \cf7 'locked'\cf5 =>
-\f3\b \cf0 true
-\f2\b0 \cf5 ,
-\f1\i //this is the on off switch
-\f2\i0 \
-            \cf7 'redirectURL'\cf5 =>\cf7 'http://www.yiiframework.com'\cf5 ,
-\f1\i //put in your desired redirect page.           
-\f2\i0 \
-       \cf8 )\cf5 ,\
-...\cf8 )\cf5 ,\
-}
+Requirements 
+...requirements of using this extension (e.g. Yii 1.1 or above)...
+Usage 
+...how to use this extension...
+	1.	Upload file UnderConstruction.php to components directory
+	2.	Load Component in main.php
+// preloading 'log' component
+'preload'=>array('log','UnderConstruction'),
+...
+	1.	Configure Component
+'components'=>array(
+...
+'UnderConstruction' => array(
+            'class' => 'application.components.UnderConstruction',
+            'allowedIPs'=>array('192.168.1.1','192.168.1.2'), //whatever IPs you want to allow
+        'locked'=>true,//this is the on off switch
+            'redirectURL'=>'http://www.yiiframework.com',//put in your desired redirect page.           
+       ),
+...),
